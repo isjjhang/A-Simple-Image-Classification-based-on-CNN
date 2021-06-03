@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}base{% endblock %}</title>
+
+  <!-- Bootstrap -->
+  <link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  {% block css %}{% endblock %}
+</head>
+
+<body>
+  <nav class="navbar navbar-default" style="overflow:hidden">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <h style="position:absolute; top:1px; left:620px" class="navbar-brand " >基于CNN与Cifar-10的图像分类系统</h>
+      </div>
+    </div>
+  </nav>
+  {% block content %}{% endblock %}
+</body>
+
+</html>
+<hr><hr><hr><hr>
+<hr><hr><hr><hr>
+<div class="col text-center">@ Jan 1st, 2020  </div>
+<br>
